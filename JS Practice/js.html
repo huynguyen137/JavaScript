@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	<p id="demo4"></p>
+	<button type="button" onclick="sorting()">Sắp xếp từ bé đến lớn</button>
+	<button type="button" onclick="revSorting()">Sắp xếp từ lớn đến bé</button>
+
+	<script type="text/javascript">
+		var x = 2, y = 3;
+		z = x + y;
+		document.getElementById("demo").innerHTML = z;
+
+		function myFunction(p1,p2,p3) {
+			return (p1+p2+p3)/3;
+		}
+		var x1 = myFunction(3,6,15);
+		document.getElementById("demo2").innerHTML = x1 ;
+
+		var phone = {
+			name: "iphone",
+			model: "12",
+			year: "2020",
+			color: "black",
+		};
+		document.getElementById("demo3").innerHTML = "This is" + " " + phone.name + " " + phone.model + " " + "color" + " " + phone.color + " " + "introduced in" + " " + phone.year;
+
+		var arr = [25,40,59,36,190,2];
+		arr.pop();
+		arr.push("400");
+		arr1 = arr;
+		document.getElementById("demo4").innerHTML = arr;
+
+		function sorting() {
+			arr.sort(function(a,b){return a - b;});
+			document.getElementById("demo4").innerHTML = arr;
+		};
+		
+		function revSorting() {
+			arr.sort(function(a,b) {return b - a;});
+			document.getElementById("demo4").innerHTML = arr;
+		};
+
+	</script>
+
+	
+</body>
+</html>
